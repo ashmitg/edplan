@@ -1,3 +1,6 @@
+#full database of deanza courses
+
+
 class Course:
     def __init__(self, name, category, difficulty, credits, required = None, combinations=None, weight = None):
         self.name = name

@@ -23,6 +23,8 @@ def remove_whitespace_from_end(string):
         string = string[:-1]
 
     return string
+
+#extract courses from assist.org agreement
 def extract_courses_from_pdf(pdf_file):
     pdf_stream = BytesIO(pdf_file)
     text = pdfminer.high_level.extract_text(pdf_stream)
@@ -46,6 +48,7 @@ def extract_courses_from_pdf(pdf_file):
       
     return courses
 
+#process the courses as well as update igetc requirements
 def process(pdf_data,  qmax, smax, passed_interest):
   requirements_data = {
     "English Composition": {"courses" : 1, "discipline":1},

@@ -113,4 +113,4 @@ def format_schedule(schedule):
 
 
 # Run the bot
-client.run('MTE0MTI1MDMyODY2MzE3OTI5NA.G-PRbJ.CCnELtPaPDKKTwFJ427jrh3snupSJOTEb6nBzc')
+client.run('')

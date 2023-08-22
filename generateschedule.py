@@ -3,13 +3,13 @@ import math
 
 def create_balanced_schedule(courses, qmax, smax):
     average_difficulty = calculate_average_difficulty(courses)*qmax
-    course_size = [2, 3, 3, 3, 2, 3, 3, 3, 2, 3, 3, 3]
+    course_size = [2, 3, 3, 3, 2, 3, 3, 3, 2, 3, 3, 3] #example schedule
     course_size = [qmax if value == 3 else smax for value in course_size]
 
     chosen_courses = set()
 
     courses.sort(key=lambda x: (x.category, x.name))
-    #courses.sort(key=lambda x: x.required, reverse=True)
+    #sort the courses alphabetically since I assume courses are in order such as Math 1A, Math 1B, Math 1C
 
     
     num_quarters = len(course_size)
@@ -28,14 +28,14 @@ def create_balanced_schedule(courses, qmax, smax):
                     quarter.append(course)
                     chosen_courses.add(course)
                     break
-                elif course.category == "Arts" or course.category == "Humanities" or course.category == "Social Science":
+                elif course.category == "Arts" or course.category == "Humanities" or course.category == "Social Science": #optimization to allow multiple elective classes in a quarter
                     quarter.append(course)
                     chosen_courses.add(course)
                     break
 
     return quarters
 
-
+#calculate a total difficulty to ensure courses are maintaned under this threshold
 def calculate_average_difficulty(courses_data):
     total_difficulty = 0
     total_courses = len(courses_data)
