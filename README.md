@@ -16,6 +16,15 @@ The Personalized Student Plan Generator is a project that aims to assist student
 - Receive a customized course plan tailored to your requirements.
 
 
+## Bot Commands (assist.org pdf file)
+
+* !generate: Generate a personalized course plan.
+* Syntax: !generate qmax:<quarters> smax:<summers> interest:(<classes>)
+* Example: !generate qmax:3, smax:2, interest:(ECON, POLI)
+* !generatesettings: Display your stored settings.
+* !generatehelp: Display the help message.
+## Discord Link with the bot
+https://discord.gg/N3rHYar6nC
 ## How to Run Locally
 
 Clone the repo
@@ -46,12 +55,12 @@ git commit -m "Push my bot!"
 git push heroku master
 ```
 
-## Authors
-
-- [@ashmitg](https://www.github.com/ashmitg)
-
-
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
+## Authors
+
+- [@ashmitg](https://www.github.com/ashmitg)
 
