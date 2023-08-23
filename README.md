@@ -15,6 +15,9 @@ The Personalized Student Plan Generator is a project that aims to assist student
 - Sequential ordering of classes based on prerequisites.
 - Receive a customized course plan tailored to your requirements.
 
+## Greedy Algorithm Interval Scheduling Implementation
+The core of the Personalized Student Course Plan Generator relies on a greedy algorithm interval scheduling approach to create a balanced and optimized course plan for students. The algorithm takes into account the user's transfer requirements, class load preferences, and interests to generate a plan that best fits their needs.
+
 
 ## Bot Commands (assist.org pdf file)
 
