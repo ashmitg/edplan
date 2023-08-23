@@ -20,7 +20,7 @@ The Personalized Student Plan Generator is a project that aims to assist student
 
 * !generate: Generate a personalized course plan.
 * Syntax: !generate qmax:<quarters> smax:<summers> interest:(<classes>)
-* Example: !generate qmax:3, smax:2, interest:(ECON, POLI)
+* Example: !generate qmax:3 smax:2 interest:ECON, POLI
 * !generatesettings: Display your stored settings.
 * !generatehelp: Display the help message.
 ## Discord Link with the bot
