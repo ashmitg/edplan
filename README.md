@@ -26,9 +26,10 @@ The core of the Personalized Student Course Plan Generator relies on a greedy al
 * Example: !generate qmax:3 smax:2 interest:ECON, POLI
 * !generatesettings: Display your stored settings.
 * !generatehelp: Display the help message.
-## Discord Link with the bot
-https://discord.gg/N3rHYar6nC
-## How to Run Locally
+## Preview
+<a href="https://ibb.co/j8zRdcK"><img src="https://i.ibb.co/fX9vbhR/Screenshot-from-2023-08-23-14-57-10.png" alt="Screenshot-from-2023-08-23-14-57-10" border="0"></a>
+
+##### How to Run Locally
 
 Clone the repo
 ```bash
