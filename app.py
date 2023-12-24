@@ -19,7 +19,7 @@ def download_sample_pdf():
     else:
         return "Sample PDF not found", 404
     
-    
+
 @app.route('/generate', methods=['POST', 'GET'])
 def generate():
     try:
@@ -27,9 +27,7 @@ def generate():
         pdf_file = request.files.get('pdfFile')
         qmax = int(request.form.get('qmax'))
         smax = int(request.form.get('smax'))
-        print(qmax, smax, "values")
         interests = request.form.getlist('interests[]')
-        print(interests, "interests", type(interests))
         # Check if a file is provided
         if not pdf_file:
             return jsonify(error="Please upload a PDF file."), 400
@@ -44,7 +42,6 @@ def generate():
 
     except Exception as e:
         # Handle exceptions appropriately
-        print(f"Error generating schedule: {str(e)}")
         return jsonify(error="Error generating schedule. Please try again."), 500
 
 if __name__ == '__main__':

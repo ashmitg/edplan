@@ -100,11 +100,9 @@ def process(pdf_data,  qmax, smax, passed_interest):
 
   for interest in passed_interest:
     interest = interest.upper()
-    print(interest, "interest")
     if interest in igetc_prefs:
         for course in subject_to_courses[igetc_prefs[interest]]:
           igetc_rankings[igetc_prefs[interest]][interest] = igetc_rankings[igetc_prefs[interest]][interest]*3
-          print(igetc_rankings[igetc_prefs[interest]])
 
           
   sorted_rankings = dict(sorted(igetc_rankings.items(), key=lambda x: max(x[1].values()), reverse=True))
@@ -114,7 +112,6 @@ def process(pdf_data,  qmax, smax, passed_interest):
       top_courses = sorted(scores, key=scores.get, reverse=True)[:requirements_data[subject_area]["discipline"]]
       for categories in top_courses:
           total = min(2,requirements_data[subject_area]["courses"])
-          print(subject_area, "total")
           for course in subject_to_courses[igetc_prefs[categories]]:
               if total==0:
                 break
