@@ -20,44 +20,7 @@ The core of the Personalized Student Course Plan Generator relies on a greedy al
 
 
 ## Bot Commands (assist.org pdf file)
-
-* !generate: Generate a personalized course plan.
-* Syntax: !generate qmax:<quarters> smax:<summers> interest:(<classes>)
-* Example: !generate qmax:3 smax:2 interest:ECON, POLI
-* !generatesettings: Display your stored settings.
-* !generatehelp: Display the help message.
-## Preview
-<a href="https://ibb.co/j8zRdcK"><img src="https://i.ibb.co/fX9vbhR/Screenshot-from-2023-08-23-14-57-10.png" alt="Screenshot-from-2023-08-23-14-57-10" border="0"></a>
-
-##### How to Run Locally
-
-Clone the repo
-```bash
-  git clone https://github.com/ashmitg/educational-plan.git
-  cd my-project
-```
-Install the packages: reccomended to use a env
-```bash
-    pip install -r requirements.txt
-```
-Run main.py ensuring your discord token is correctly configured
-
-Congrats you ran the bot!
-
-## Heroku Hosting
-
-1. Make sure you have a heroku account
-2. Log into heroku
-```bash
-heroku login
-```
-3. Procfile and requirements are already setup!
-4. Next step deploy!
-```bash
-git add .
-git commit -m "Push my bot!"
-git push heroku master
-```
+Deployed as a website on heroku for anyone to try out!
 
 ## License
 
