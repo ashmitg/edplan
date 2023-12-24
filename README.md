@@ -16,10 +16,8 @@ The Personalized Student Plan Generator is a project designed to assist students
 The core of the Personalized Student Course Plan Generator relies on a greedy algorithm interval scheduling approach to create a balanced and optimized course plan for students. The algorithm takes into account the user's transfer requirements, class load preferences, and interests to generate a plan that best fits their needs.
 
 ## Website Deployment
-
-The Personalized Student Plan Generator is deployed as a website on Heroku, accessible to anyone. Visit [Your Heroku App URL] to try it out!
-
-## Bot Commands (assist.org pdf file)
+Used Flask as a web framework
+The Personalized Student Plan Generator is deployed as a website on Heroku, accessible to anyone. Visit [https://personalizedcourse-b82204583c81.herokuapp.com/] to try it out!
 
 ## License
 
