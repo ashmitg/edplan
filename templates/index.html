@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-indigo-500 p-4 flex justify-between items-center">
+        <div class="text-white font-bold text-lg">
+          De Anza Schedule Generator
+        </div>  
+        <div>
+          <a href="https://github.com/ashmitg/edplan" target="_blank" class="flex items-center text-white">
+            <span class="mr-2">GitHub</span>
+            <img src="https://img.icons8.com/ios/50/000000/github.png" alt="GitHub" />
+          </a>
+        </div>
+      </nav>
+
+<header class="bg-white p-12 shadow">
+  <div class="container mx-auto text-center">
+    <h1 class="text-3xl font-bold mb-6">Build Your Personalized Schedule</h1>   
+    <p class="text-gray-600">Upload your <a href="https://assist.org" target="_blank" style="text-decoration: underline;">assist.org</a> PDF and select your preferences to auto-generate a custom schedule.</p>
+</div>
+</header>
+
+<main class="p-12">
+  <div class="container mx-auto bg-white rounded-lg shadow p-8">
+    <div class="mb-6">
+
+      <label class="font-bold mb-2 block">Upload Transcript</label>
+      <input type="file" id="pdfFile" class="border p-2 rounded w-full">
+    </div>
+    <a href="/samplepdf" download="sample" style="color: blue;">Download Sample PDF</a>
+
+
+    <div class="space-y-4 mb-6">
+        <div>
+          <label class="font-bold">Max Classes Per Quarter (1-4)</label>  
+          <input type="number" id="qmax" value="3" min="1" max="4" class="border p-2 rounded w-full"> 
+        </div>
+      
+        <div>
+          <label class="font-bold">Max Summer Classes (0-3)</label>
+          <input type="number" id="smax" value="1" min="0" max="3" class="border p-2 rounded w-full">
+        </div>
+      </div>
+    
+    <div>
+      <label class="font-bold mb-2 block">Interests (select up to 3)</label>
+      <select id="interests" class="w-full" multiple="multiple" style="width: 100%;">
+        <option value="ACCT">Accounting-DA</option> <option value="ADMJ">Administration of Justice-DA</option> <option value="AFAM">African American Studies-DA</option> <option value="ANTH">Anthropology-FD</option> <option value="ASAM">Asian-American Studies-DA</option> <option value="ASTR">Astronomy-FD</option> <option value="AUTO">Automotive Technology-DA</option> <option value="BIOL">Biology-FD</option> <option value="BUS">Business-FD</option> <option value="CLP">Career Life Planning-DA</option> <option value="CHEM">Chemistry-FD</option> <option value="CHLX">Chicanx/Latinx Studies-DA</option> <option value="CD">Child Development-DA</option> <option value="COMM">Communication Studies-FD</option> <option value="CETH">Comparative Ethnic Studies-DA</option> <option value="CIS">Computer Information System-FD</option> <option value="COUN">Counseling-DA</option> <option value="DANC">DANC-FD</option> <option value="DMT">Design &amp; Manufacturing Tech-DA</option> <option value="ECON">Economics-FD</option> <option value="EDUC">Education-FD</option> <option value="EAC">Educational Access-DA</option> <option value="ENGR">Engineering-FD</option> <option value="ESL">English as a Second Lang-FD</option> <option value="ELIT">English/Literature-DA</option> <option value="EWRT">English/Writing-DA</option> <option value="ESCI">Environmental Science-DA</option> <option value="ES">Environmental Studies-DA</option> <option value="FTV">Film &amp; Television Product-DA</option> <option value="FREN">French-FD</option> <option value="GEO">Geography-DA</option> <option value="GEOL">Geology-FD</option> <option value="GERM">German-FD</option> <option value="HT">Health Technologies-DA</option> <option value="HLTH">Health-FD</option> <option value="HNDI">Hindi-DA</option> <option value="HIST">History-FD</option> <option value="HCD">Human Development-DA</option> <option value="HUMI">Humanities-DA</option> <option value="ICS">Intercultural Studies-DA</option> <option value="INTL">International Studies-DA</option> <option value="ITAL">Italian-FD</option> <option value="JAPN">Japanese-FD</option> <option value="JOUR">Journalism-DA</option> <option value="KNES">Kinesiology-DA</option> <option value="KORE">Korean-FD</option> <option value="LA">Language Arts-DA</option> <option value="LA">Learning Assistance-DA</option> <option value="LS">Learning Strategies-DA</option> <option value="LIB">Library-DA</option> <option value="LING">Linguistics-FD</option> <option value="MAND">Mandarin-DA</option> <option value="MATH">Mathematics-FD</option> <option value="MET">Meteorology-FD</option> <option value="MUSI">Music-DA</option> <option value="NAIS">Native Americ, Indigenous-DA</option> <option value="NURS">Nursing-DA</option> <option value="NUTR">Nutrition-DA</option> <option value="PARA">Paralegal Program-DA</option> <option value="PHIL">Philosophy-FD</option> <option value="PHTG">Photography-DA</option> <option value="PE">Physical Education-DA</option> <option value="PEA">Physical Education/Adapted-DA</option> <option value="PHYS">Physics-FD</option> <option value="POLI">Political Science-FD</option> <option value="PSYC">Psychology-FD</option> <option value="RE">Real Estate-DA</option> <option value="RUSS">Russian-FD</option> <option value="SIGN">Sign Language-DA</option> <option value="SOC">Social Science-FD</option> <option value="SOC">Sociology-FD</option> <option value="SPAN">Spanish-FD</option> <option value="THEA">Theater Arts-DA</option> <option value="VIET">Vietnamese Language-DA</option> <option value="VAD">Visual Arts and Design-DA</option> <option value="WMST">Women&apos;s Studies-DA</option>
+      </select>
+    </div>
+    
+    <button id="generateBtn" class="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 mt-6">
+      Generate My Schedule
+    </button>
+    
+    <div id="loading" class="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50" style="display: none;">
+        <div class="loader ease-linear border-8 border-t-8 border-gray-200 h-16 w-16"></div>
+      </div>
+      
+    
+    <div id="result" style="display: none;">
+      <!-- Display the result here -->
+    </div>
+  </div>
+</main>
+
+<script>
+    
+
+  $(document).ready(function() {
+    $('#interests').select2({
+      maximumSelectionLength: 3,
+      placeholder: 'Select up to 3 interests',
+      allowClear: true,
+    });
+
+    $('#generateBtn').click(function() {
+      var pdfFile = $('#pdfFile')[0].files[0];
+      
+      if (!pdfFile) {
+        alert('Please select a PDF file.');
+        return;
+      }
+
+      showLoadingAnimation();
+      sendDataToServer(pdfFile);
+    });
+  });
+
+  function showLoadingAnimation() {
+    $('#loading').show();
+  }
+
+  function sendDataToServer(pdfFile) {
+    var formData = new FormData();
+    formData.append('pdfFile', pdfFile);
+    formData.append('qmax', $('#qmax').val());
+    formData.append('smax', $('#smax').val());
+    
+    var interests = $('#interests').val();
+    if (interests) {
+      interests.forEach(function(interest) {
+        formData.append('interests[]', interest);
+      });
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: '/generate',
+      data: formData,
+      contentType: false,
+      processData: false,
+      success: function(result) {
+        hideLoadingAnimation();
+        displayResult(result);
+      },
+      error: function() {
+        hideLoadingAnimation();
+        alert('Error generating schedule. Please try again.');
+      }
+    });
+  }
+
+  function hideLoadingAnimation() {
+    $('#loading').hide();
+  }
+
+  function displayResult(result) {
+  var resultContainer = $('#result');
+  resultContainer.empty(); // Clear previous results
+
+  var quarterOrder = ['Summer', 'Fall', 'Winter'];
+
+  // Determine the starting quarter based on whether the user chose a summer quarter
+  var startQuarterIndex = $('#smax').val() > 0 ? 0 : 1;
+
+  // Loop through each quarter
+  for (var i = 0; i < result.length; i++) {
+    
+    var quarterIndex = (startQuarterIndex + i) % quarterOrder.length;
+    var quarterContainer = $('<div class="quarter-container mb-4 bg-gray-200 p-4 rounded-md"></div>');
+
+    // Check if there are no courses in the quarter
+    if (result[i].length == 0) {
+      continue;
+    }
+
+    // Loop through each course in the quarter
+    for (var j = 0; j < result[i].length; j++) {
+      var course = result[i][j];
+      var courseElement = $('<div class="course-container bg-white p-2 mb-2 rounded-md"></div>');
+      courseElement.append('<p class="font-bold">Name: ' + course.name + '</p>');
+      courseElement.append('<p>Category: ' + course.category + '</p>');
+      quarterContainer.append(courseElement);
+    }
+
+    resultContainer.append('<h2 class="text-xl font-bold mb-2">' + quarterOrder[quarterIndex] + ' Quarter</h2>'); // Print quarter name
+    resultContainer.append(quarterContainer);
+  }
+
+  resultContainer.show();
+}
+  
+</script>
+
+</body>
+</html>
