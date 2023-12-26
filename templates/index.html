@@ -140,12 +140,11 @@
   var quarterOrder = $('#smax').val() > 0 ? ['Summer', 'Fall', 'Winter', 'Spring'] : ['Fall', 'Winter', 'Spring'];
 
   // Determine the starting quarter based on whether the user chose a summer quarter
-  var startQuarterIndex = 0;
 
   // Loop through each quarter
   for (var i = 0; i < result.length; i++) {
     
-    var quarterIndex = (startQuarterIndex + i) % quarterOrder.length;
+    var quarterIndex = (i) % quarterOrder.length;
     var quarterContainer = $('<div class="quarter-container mb-4 bg-gray-200 p-4 rounded-md"></div>');
 
     // Check if there are no courses in the quarter
