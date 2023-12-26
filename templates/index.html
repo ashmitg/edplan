@@ -137,10 +137,10 @@
   var resultContainer = $('#result');
   resultContainer.empty(); // Clear previous results
 
-  var quarterOrder = ['Summer', 'Fall', 'Winter', 'Spring'];
+  var quarterOrder = $('#smax').val() > 0 ? ['Summer', 'Fall', 'Winter', 'Spring'] : ['Fall', 'Winter', 'Spring'];
 
   // Determine the starting quarter based on whether the user chose a summer quarter
-  var startQuarterIndex = $('#smax').val() > 0 ? 0 : 1;
+  var startQuarterIndex = 0;
 
   // Loop through each quarter
   for (var i = 0; i < result.length; i++) {
